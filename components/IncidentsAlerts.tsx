@@ -76,10 +76,13 @@ export const IncidentsAlerts: React.FC = () => {
                 <div className="p-5 flex flex-col md:flex-row gap-6">
                     {/* Visual Evidence Context */}
                     <div className="relative group flex-shrink-0 w-full md:w-64 h-48 md:h-40 rounded-xl overflow-hidden bg-gray-900 shadow-inner">
-                        <img 
+                        <video 
                             src={incident.imageUrl} 
-                            alt="Incident Context" 
-                            className={`w-full h-full object-cover transition-transform duration-700 ${isExpanded ? 'scale-110 opacity-60' : 'opacity-90 group-hover:scale-105'}`} 
+                            className={`w-full h-full object-cover transition-transform duration-700 ${isExpanded ? 'scale-110 opacity-60' : 'opacity-90 group-hover:scale-105'}`}
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
                         />
                         {/* Overlay Icons */}
                         <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/20 backdrop-blur-[2px]">

@@ -8,6 +8,8 @@ import { ImpactROI } from './components/ImpactROI';
 import { Workflows } from './components/Workflows';
 import { SystemHealth } from './components/SystemHealth';
 import { AdminAccess } from './components/AdminAccess';
+import { FloorMap } from './components/FloorMap';
+import { LiveCCTV } from './components/LiveCCTV';
 
 const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState('command');
@@ -22,6 +24,8 @@ const App: React.FC = () => {
       case 'workflows': return <Workflows />;
       case 'health': return <SystemHealth />;
       case 'admin': return <AdminAccess />;
+      case 'floormap': return <FloorMap />;
+      case 'livecctv': return <LiveCCTV />;
       default: return <CommandCenter />;
     }
   };

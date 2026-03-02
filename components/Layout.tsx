@@ -14,7 +14,9 @@ import {
   Settings,
   GitBranch,
   Menu,
-  X
+  X,
+  MapPin,
+  Cctv
 } from 'lucide-react';
 
 interface LayoutProps {
@@ -28,6 +30,8 @@ const NAV_ITEMS = [
   { id: 'sites', label: 'Operations Map', icon: Map },
   { id: 'incidents', label: 'Incidents', icon: AlertCircle },
   { id: 'analytics', label: 'Intelligence', icon: BrainCircuit },
+  { id: 'floormap', label: 'Floor Tracking', icon: MapPin },
+  { id: 'livecctv', label: 'Live CCTV', icon: Cctv },
   { id: 'roi', label: 'Impact', icon: BarChart3 },
   { id: 'workflows', label: 'Workflows', icon: GitBranch },
   { id: 'health', label: 'System', icon: Activity },
@@ -154,7 +158,7 @@ export const Layout: React.FC<LayoutProps> = ({ children, activeTab, onTabChange
             </button>
             <div>
               <h2 className="text-lg lg:text-2xl font-bold text-charcoal tracking-tight">
-                {NAV_ITEMS.find((n) => n.id === activeTab)?.label || (activeTab === 'admin' ? 'Admin & Settings' : 'System')}
+              {NAV_ITEMS.find((n) => n.id === activeTab)?.label || (activeTab === 'admin' ? 'Admin & Settings' : 'System')}
               </h2>
               <div className="hidden lg:flex items-center gap-2 mt-0.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-status-success"></span>
